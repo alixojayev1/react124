@@ -49,21 +49,22 @@ const RestCountrist = () => {
       <div className='flex items-center justify-center' >
   
           <div >
+          <Row >
           {
           data.map((info, index) => (
             
-              <Row >
-                <Col lg={12} md={4} sm={6} xs={12}>
-                  <div className="card " key={index}  >
+
+                <Col lg={3} md={4} sm={6} xs={12}>
+                  <div className="card" key={index}  >
                     <img src={info.flags.png} alt="tittle" />
                     <h3 className='common'>{info.name.common}</h3>
                     <h5 className='capital'>{info.capital}</h5>
                   </div>
                 </Col>
-              </Row>
            
-          ))
-        }
+           ))
+          }
+          </Row>
           </div>
         
       </div>

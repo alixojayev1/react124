@@ -1,0 +1,37 @@
+.input{
+    width: 500px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-right:20px ;
+}
+.submit_btn{
+    padding: 12px 10px;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+.submit_btn:hover{
+    background-color: green;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.delet_btn{
+    background-color: red;
+    border-radius: 5px ;
+    padding: 5px 5px;
+}
+.edit_btn{
+    background-color: aqua;
+    border-radius: 5px ;
+    padding: 5px 5px;
+    width: 60px;
+}

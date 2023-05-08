@@ -4,6 +4,10 @@ import axios from "axios";
 import { Col, Container, Row } from 'react-bootstrap';
 
 
+
+
+
+
 const RestCountrist = () => {
 
   const [countrist, setCountrist] = useState('posts');
@@ -37,6 +41,21 @@ const RestCountrist = () => {
     }
   };
 
+  const myData = data.map((info, index) => (
+      
+
+          <Col lg={4} md={4} sm={6} xs={12}>
+            <div className="card" key={index}  >
+              <img src={info.flags.png} alt="tittle" />
+              <h3 className='common'>{info.name.common}</h3>
+              <h5 className='capital'>{info.capital}</h5>
+             
+            </div>
+          </Col>
+     
+     ));
+    
+
 
   return (
     <Container>
@@ -50,20 +69,9 @@ const RestCountrist = () => {
   
           <div >
           <Row >
-          {
-          data.map((info, index) => (
-            
-
-                <Col lg={3} md={4} sm={6} xs={12}>
-                  <div className="card" key={index}  >
-                    <img src={info.flags.png} alt="tittle" />
-                    <h3 className='common'>{info.name.common}</h3>
-                    <h5 className='capital'>{info.capital}</h5>
-                  </div>
-                </Col>
-           
-           ))
-          }
+             {
+              myData
+             }
           </Row>
           </div>
         
